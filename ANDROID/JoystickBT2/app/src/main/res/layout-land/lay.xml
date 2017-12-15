@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewBin"
+        android:layout_alignParentLeft="false"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="X"
+            android:textColor="#444444"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView1"
+            android:text="Y"
+            android:textColor="#444444"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView2"
+            android:text="Angle"
+            android:textColor="#444444"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView3"
+            android:text="Distance"
+            android:textColor="#444444"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView3"
+            android:text="Direction"
+            android:textColor="#444444"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_joystick"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="64dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/image_button_bg"></RelativeLayout>
+
+    <TextView
+        android:id="@+id/textViewInt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonBT"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@+id/buttonBT"
+        android:text="Val_BT:" />
+
+    <TextView
+        android:id="@+id/textViewBin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/layout_joystick"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/layout_joystick"
+        android:layout_marginBottom="19dp"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/buttonBT"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/linearLayout1"
+        android:layout_marginStart="21dp"
+        android:text="BT" />
+
+    <Button
+        android:id="@+id/buttonUp"
+        android:gravity="bottom|center_horizontal"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/layout_joystick"
+        android:layout_toEndOf="@+id/buttonBT"
+        android:textSize="30dp"
+        android:text="↑" />
+
+    <Button
+        android:id="@+id/buttonDown"
+        android:gravity="bottom|center_horizontal"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/buttonHover"
+        android:layout_toEndOf="@+id/buttonUp"
+        android:textSize="30dp"
+        android:text="↓" />
+
+    <Button
+        android:id="@+id/buttonHover"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/buttonUp"
+        android:layout_alignEnd="@+id/buttonDown"
+        android:text="Hover" />
+</RelativeLayout>
